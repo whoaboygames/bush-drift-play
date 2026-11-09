@@ -1,0 +1,13 @@
+{
+  "name": "Bush Drift (play test)",
+  "short_name": "Bush Drift",
+  "start_url": "play.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#000000",
+  "theme_color": "#111111",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

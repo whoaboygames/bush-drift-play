@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bush Drift play test</title>
+<meta name="description" content="Help play-test Bush Drift: drift a ute down a real dirt road in the South East Forest, NSW. Runs in the browser.">
+<meta property="og:title" content="Bush Drift play test">
+<meta property="og:description" content="Drift a ute down 7.8 km of real dirt road in the South East Forest, NSW. In your browser.">
+<meta property="og:image" content="https://whoaboygames.github.io/bush-drift-play/hero.png">
+<style>
+  :root { --bg: #f4efe6; --ink: #1d2328; --dim: #5d6b72; --card: #fffaf2; --line: #e3d9c8; --accent: #c8452d; --accent-ink: #fff; --gold: #b07a12; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #15181b; --ink: #ece6dc; --dim: #a3aeb4; --card: #1d2125; --line: #2f353a; --accent: #e0603f; --accent-ink: #fff; --gold: #e2b44d; } }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body { margin: 0; color: var(--ink); background: var(--bg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px 48px; }
+  header h1 { font-size: clamp(30px, 6vw, 46px); line-height: 1.05; margin: 8px 0 6px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--dim); font-size: 18px; }
+  .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--accent); font-weight: 700; }
+  .shots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 22px 0 18px; }
+  .shots img { width: 100%; height: auto; display: block; border-radius: 8px; image-rendering: pixelated; border: 1px solid var(--line); }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 8px 0 26px; }
+  .btn { display: inline-block; padding: 14px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 18px; }
+  .btn.play { background: var(--accent); color: var(--accent-ink); }
+  .btn.android { background: #3d7a3a; }
+  .btn.fb { border: 2px solid var(--ink); color: var(--ink); font-size: 16px; padding: 11px 18px; }
+  .note { color: var(--dim); font-size: 14px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .card h2 { font-size: 18px; margin: 0 0 8px; }
+  .card ul, .card ol { margin: 0; padding-left: 20px; }
+  .card li { margin: 4px 0; }
+  table { border-collapse: collapse; width: 100%; }
+  td { padding: 4px 0; vertical-align: top; }
+  td:first-child { width: 46%; }
+  kbd { font: 600 13px/1 ui-monospace, Menlo, monospace; background: var(--bg); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: 3px 6px; }
+  .wide { grid-column: 1 / -1; }
+  footer { margin-top: 26px; color: var(--dim); font-size: 13px; }
+  footer a, .card a { color: inherit; }
+  .gallery { margin: 0 0 26px; }
+  .gallery h2 { font-size: 20px; margin: 0 0 10px; }
+  .gal { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  .gal a { display: block; }
+  .gal img, .gal video { width: 100%; height: auto; display: block; border-radius: 6px; image-rendering: pixelated; border: 1px solid var(--line); background: var(--line); }
+  .gal .w { grid-column: span 6; } .gal .h { grid-column: span 3; } .gal .s { grid-column: span 2; }
+  @media (max-width: 640px) { .gal { grid-template-columns: 1fr 1fr; } .gal .w, .gal .h { grid-column: span 2; } .gal .s { grid-column: span 1; } }
+  @media (max-width: 640px) { .shots, .grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Play test · help wanted</div>
+    <h1>Bush Drift</h1>
+    <p>Drift the Cattleman, a single-cab ute, down 7.8 km of real dirt road, from an old cattlemen's hut in the NSW South East Forest down to a creek bridge. Hit a tree or a post and the run's over. <b>Explore</b>, for roaming the bush at your own pace, unlocks as you play.</p>
+  </header>
+
+  <div class="shots">
+    <img src="start.png" width="640" height="480" alt="The Cattleman parked at the start, looking down over the old hut, its camp and the clearing at golden hour">
+    <img src="drift.png" width="640" height="480" alt="The Cattleman sliding sideways through the bush at 80 km/h">
+  </div>
+
+  <div class="cta">
+    <a class="btn play" href="play.html">▶ Play in your browser</a>
+    <a class="btn play android" href="https://github.com/whoaboygames/bush-drift-play/releases/latest/download/bush-drift.apk">⬇ Android app</a>
+    <a class="btn fb" href="https://github.com/whoaboygames/bush-drift-play/issues/new?template=playtest.yml">Tell me how it went</a>
+    <span class="note">Browser: a computer with a keyboard is best (Chrome, Edge, Firefox or Safari; about 25 MB). On an Android phone, get the app (13 MB): steps below. The game fills the window; the ⛶ button (or F) goes full screen. On an iPhone or iPad, tap Share, then <b>Add to Home Screen</b>, and open it from there for the whole screen.</span>
+  </div>
+
+  <section class="gallery" id="pictures">
+    <h2>More pictures</h2>
+    <div class="gal">
+      <video class="w" src="gallery/drift.mp4" width="1196" height="534" autoplay muted loop playsinline preload="metadata" aria-label="A three-second clip: the Cattleman in a long, fast slide through the bush, heading for the trees">
+      <img src="gallery/drift.gif" width="598" height="267" loading="lazy" alt="The Cattleman in a long, fast slide through the bush">
+    </video>
+      <a href="gallery/hero-1.webp" class="h"><img src="gallery/hero-1.webp" width="1794" height="801" loading="lazy" decoding="async" alt="The Cattleman sideways at 82 km/h in the tall bush below the hut, dust behind it"></a>
+      <a href="gallery/hero-2.webp" class="h"><img src="gallery/hero-2.webp" width="1794" height="801" loading="lazy" decoding="async" alt="A long slide at 82 km/h, the ute 43 degrees sideways between the gums"></a>
+      <a href="gallery/hero-3.webp" class="h"><img src="gallery/hero-3.webp" width="1794" height="801" loading="lazy" decoding="async" alt="Head-on: the Cattleman sliding towards the camera, a plume of dust down the road behind it"></a>
+      <a href="gallery/hero-4.webp" class="h"><img src="gallery/hero-4.webp" width="1794" height="801" loading="lazy" decoding="async" alt="Sliding out of the forest at golden hour, dust trailing across the road"></a>
+      <a href="gallery/left-2.webp" class="s"><img src="gallery/left-2.webp" width="1200" height="900" loading="lazy" decoding="async" alt="The hut, its camp and the parked Cattleman from high on the hill"></a>
+      <a href="gallery/left-3.webp" class="s"><img src="gallery/left-3.webp" width="1200" height="900" loading="lazy" decoding="async" alt="The start: the Cattleman on the road beside the hut, the camp's fire pit and benches on the lawn"></a>
+      <a href="gallery/left-4.webp" class="s"><img src="gallery/left-4.webp" width="1200" height="900" loading="lazy" decoding="async" alt="The Cattleman parked by the hut, the road running on into the forest"></a>
+      <a href="gallery/right-2.webp" class="s"><img src="gallery/right-2.webp" width="1068" height="801" loading="lazy" decoding="async" alt="The Cattleman sliding at the camera with the sun low behind the trees"></a>
+      <a href="gallery/right-3.webp" class="s"><img src="gallery/right-3.webp" width="1068" height="801" loading="lazy" decoding="async" alt="Head-on in the bush, sideways, the dust hanging along the road"></a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Controls</h2>
+      <table>
+        <tr><td><kbd>←</kbd> <kbd>→</kbd></td><td>steer</td></tr>
+        <tr><td><kbd>↑</kbd> / <kbd>↓</kbd></td><td>accelerate / brake</td></tr>
+        <tr><td><kbd>Space</kbd></td><td>handbrake (swing the back out)</td></tr>
+        <tr><td><kbd>L</kbd></td><td>Low Range, the ute's 4WD low (both modes; in at up to 20 km/h)</td></tr>
+        <tr><td><kbd>U</kbd></td><td>the UHF radio (Explore, once it's fitted)</td></tr>
+        <tr><td><kbd>R</kbd></td><td>restart from the hut (in Explore: recover when stuck)</td></tr>
+        <tr><td><kbd>P</kbd></td><td>pixel size</td></tr>
+        <tr><td><kbd>M</kbd></td><td>the map (Explore: pauses on it; <kbd>M</kbd> again to drive on)</td></tr>
+        <tr><td><kbd>Esc</kbd></td><td>pause (Drift and Explore)</td></tr>
+        <tr><td><kbd>F</kbd></td><td>full screen (the ⛶ button too)</td></tr>
+        <tr><td><kbd>Enter</kbd> / <kbd>Esc</kbd></td><td>menus</td></tr>
+      </table>
+      <p class="note">A gamepad works too: Start pauses, Select restarts a Drift run, D-pad down is the radio, Start and Select together show the readout. On the keyboard, hold ↓ to stop; let go and press it again for reverse.</p>
+      <p class="note">Click the game once first so it gets the keyboard and the sound.</p>
+    </div>
+    <div class="card">
+      <h2>Scoring</h2>
+      <ul>
+        <li>Any slide at 25 km/h or more fills the <b>pot</b>: the more sideways and the faster, the more points (shallow slides count too).</li>
+        <li>Keep sliding and the <b>multiplier</b> climbs (up to ×9). No time-out.</li>
+        <li>The pot (× multiplier) <b>banks itself</b> about 4 seconds after your last slide (no bank button), so the multiplier carries down a straight into the next corner; a thin bar under the pot drains while it waits. The bridge banks it too.</li>
+        <li><b>Briefly off the road</b> the pot freezes (greyed): nothing added, the multiplier kept. Back on within 3 seconds and it carries on; longer and it banks.</li>
+        <li>A <b>thud</b> into something solid or a <b>spin</b> loses the unbanked pot and the multiplier (donuts are fine). Crash into a tree or a post hard and the run's over. <b>Logs</b> splinter: each one is firewood in the tray.</li>
+        <li><b>Donuts</b> on the road: +500 each (full lock and throttle from a stop). Practise in the car park.</li>
+        <li><b>Off the road</b> is fine for 15 seconds (it says OFF-ROAD and counts down); stay out past that and you're put back on the track, or, until Explore is open, the run's over. Nothing scores off the road, the hut's clearing included. There's no way through the bank at the bush's edge, and the bridge needs every checkpoint along the road.</li>
+        <li><b>20 deer</b> are hidden in the bush, the same spots every run. Drive into one to find it. Your finds and the hidden <b>achievements</b> are kept on your device (title menu → Achievements).</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Explore (unlocks as you play)</h2>
+      <ul>
+        <li>No score and no clock: drive the road both ways, or off it, as long as you like. Trees just stop you.</li>
+        <li><b>Firewood:</b> split logs (hit them at about 20 to 30 km/h; steadier as the saw blunts) and bring a full tray back to the hut. Skip the rotten ones, and don't hit them too hard. Will's chainsaw blunts as you go; sharpen it at the hut (pause menu). File it well enough and you can sharpen it out in the bush too.</li>
+        <li><b>The hut's clearing</b> hides the makings of a charcuterie board, in new spots every day. Find all twelve.</li>
+        <li><b>Low Range</b> (<kbd>L</kbd>, or the stick on a phone): the ute's 4WD low, for crawling up steep, rough ground. Some things need it. Stones washed up against a big rock or stump make steps: pick a line and crawl up, or go round.</li>
+        <li><b>Creek bogs:</b> sand bars and silty mud down the creek way can really bog the ute. Air down, use Low Range, keep your momentum, and rock it back and forth if you're stuck.</li>
+        <li>The ute wears and breaks, and tells you what's wrong: an alert top left while you drive, and pause, <b>The ute</b>, for the detail. Change a tyre there. Set the <b>tyre pressures</b> any time (pause, Tyre pressures: road, gravel, creek or your own; set at once when you're stopped, or at your next stop). The hut fixes everything. Rather not? <b>Damage: Off</b>, in Settings or the pause menu.</li>
+        <li><b>Achievements</b> now have sections, filters and clues for the hidden ones. Track up to three and they show while you drive.</li>
+        <li>Pause (<kbd>Esc</kbd>, the button top left, or Start on a pad): map, The ute, tyre pressures, the Cattleman's garage (at the hut), back to the hut, start a new day, Settings. Your firewood, deer and the saw, and the little ute with what's hurt, are shown there too. In Drift, pause holds the run: Keep driving, Restart run, Settings, Quit to title.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>New in play test 4</h2>
+      <ul>
+        <li><b>Drive anywhere.</b> Off the track the forest is solid, natural bush right out to the horizon. No invisible walls: the edge is big trees, thick scrub and boulders.</li>
+        <li><b>The bush slows you down:</b> shrubs, ferns and tussocks drag by their size and your speed, bend as you push through and throw up leaves and twigs. Thick tea-tree slows you to a crawl, but never stops you dead.</li>
+        <li><b>Knock things over:</b> saplings, wattles, stags and small trees lean, give and come down, or snap and leave a jagged stump. Big gums don't move. What you knock down, and the track you flatten, stay for the rest of the day.</li>
+        <li><b>The local forest's own plants</b> in natural stands, full gums across open ground and a canopy into the blue distance, with nothing growing in from the ground as you drive.</li>
+        <li><b>A much fuller creek:</b> rock gardens, huge fallen gums, sticks that snap, and sand bars and silty mud that will really bog you. <b>A road that fights back:</b> potholes, ruts, stones, washouts and whoa-boys.</li>
+        <li><b>The Cattleman tells you what's wrong:</b> flats, slow leaks, bent steering you can feel, a holed radiator, fading shocks, wet brakes. A small alert as it happens, the rest in the pause menu. <b>A proper tyre change</b>, and <b>tyre pressures</b> any time: road, gravel and creek presets, or your own.</li>
+        <li><b>Honest rocks and logs:</b> two solid axles that twist, tyres that climb what they can, a belly that scrapes. Some things need Low Range. <b>A body that moves:</b> it leans in corners and dips under brakes, and on a phone you feel the corrugations buzz.</li>
+        <li><b>The Cattleman's garage</b>, back at the hut: the ute on a turntable. Fit or take off each piece of kit you've earned and see what it weighs and does. The clues are under Achievements. <b>Rather not break things?</b> Damage: Off.</li>
+        <li><b>The hut and its camp rebuilt</b> from photos and video of the real place: the roof, the chimney, the tank, a mown lawn, the fire pit, benches and table, and the trees round it placed one by one. <b>Light your own fire</b> (you'll have to go looking for wood). <b>Quayle's out bush:</b> get on the UHF and he'll talk you in, and he rides in the tray after. The deer graze and look up as you come near. <b>The stew:</b> bring Quayle and a deer home and build the fire up.</li>
+        <li><b>Soft ground:</b> how far you sink depends on your tyre pressure, so air down for sand and bogs. <b>Rollovers</b> in Explore: up on two wheels, then back down, or over. <b>The throttle controller:</b> earn it with a Full pull, then set it from Eco 1-9 to Sport 1-9.</li>
+        <li><b>Drift calls:</b> a good slide gets a word when it ends, from <b>Tidy</b> up to <b>Bush legend!</b> Flick into the next corner for a chain; a slide you can't catch is <b>SPUN!</b> and costs the pot. The pot <b>banks itself</b> about 4 seconds after your last slide, and pause holds the run.</li>
+        <li><b>Full screen on any phone</b>, the buttons over the picture (Settings → Screen: Classic 4:3 for the old look). <b>New pedals</b> for gas and brake, a lever for the handbrake, a stick for Low Range, and a small <b>R</b> for reverse.</li>
+        <li><b>Sound:</b> wind in the trees, a whipbird and kookaburras, the creek, tyres by the surface, branches squealing on the panels. <b>Looks:</b> sharper shadows round the ute, running water with wakes round the rocks, and the ute in finer detail.</li>
+        <li><b>A steady 60 frames a second</b> at every test spot on a Pixel 8 Pro, the title in a third of a second, no hitch starting a drive, and a third of the memory. Settings → <b>Detail: Normal</b> for older phones.</li>
+        <li><b>Fixes:</b> tougher saves, no more flickering ground or floating "diamonds" in the grass, no bouncing off rocks you couldn't see, and plenty more. There's more out there than this list says.</li>
+      </ul>
+    </div>
+    <div class="card wide">
+      <h2>The route</h2>
+      <img src="birdseye.png" width="1280" height="960" style="width:100%;height:auto;border-radius:8px" alt="The route from above: the hut at the top left, down through the forest past a creek ford to the bridge at the bottom right, 7.8 km by road">
+      <p class="note">7.8 km by road: from the hut across the plateau, down the descent to a creek ford and on to the bridge. The game's own ground from above; the road from OpenStreetMap and NSW Spatial Services data.</p>
+    </div>
+    <div class="card wide">
+      <h2>Android: installing the app</h2>
+      <ol>
+        <li>On your phone, tap <b>⬇ Android app</b> above. It downloads <code>bush-drift.apk</code>.</li>
+        <li>Open the download. Android asks to allow installing apps from your browser: tap <b>Settings</b>, switch on <b>Allow from this source</b>, then go back.</li>
+        <li>Tap <b>Install</b>. If Play Protect warns about an unknown developer, choose <b>More details → Install anyway</b> (it's not from the Play Store, that's all).</li>
+        <li>Turn the phone sideways. The lower left of the screen steers; the <b>pedals</b> (gas and brake), the <b>lever</b> (handbrake), the <b>stick</b> (Low Range) and a small <b>R</b> (reverse) are on the right; pause and restart at the top. Install it straight over the last play test: your deer, achievements and records stay.</li>
+      </ol>
+      <p class="note">Android 10 or newer. On an iPhone, play in the browser: tap Share, then <b>Add to Home Screen</b>, and open it from there for the whole screen.</p>
+    </div>
+    <div class="card wide">
+      <h2>What I'd love to know</h2>
+      <ol>
+        <li>Does it run smoothly on your computer or phone (which browser or phone)?</li>
+        <li>How far did you get, and what ended your runs?</li>
+        <li>The handling: too grippy, about right, or too slippery? Can you catch a big slide? On a phone: are the touch buttons the right size and place?</li>
+        <li>Explore: what did you find, and where did you get stuck? What broke on your ute, and could you tell what was wrong?</li>
+        <li>Bush-bashing: does pushing through scrub, saplings and small trees feel right? Anything that stopped you dead or felt unfair (a tree that wouldn't give, a bog you couldn't escape, a rock you bounced off)?</li>
+        <li>Could you find Quayle with the radio? Did you get the fire going?</li>
+        <li>On a phone: the new pedals and the R button: does reversing feel natural? Does it ever stutter or get hot?</li>
+        <li>Did your progress from play test 3 come through?</li>
+        <li>What was fun, and what was annoying or confusing?</li>
+        <li>The speed effect: too much, about right, or too little?</li>
+        <li>Full screen: does it fit your screen (anything hidden under the camera or a button)? If it stutters, what does <b>Settings → Performance stats</b> say?</li>
+        <li>Drift calls: do good slides get called often enough, and the big ones rarely enough? Too chatty, or not enough?</li>
+        <li>Sound, look, scoring: anything that feels off.</li>
+      </ol>
+      <p class="note">The feedback button opens a short form on GitHub (a free account is needed). Or just message me.</p>
+    </div>
+  </div>
+
+  <footer>
+    Build 2026-11-09 f7c779b · Bush Drift by Whoa-Boy Games · © 2026, all rights reserved<br>
+    Road line © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> (ODbL). Elevation and tree cover from NSW DEM and imagery © State of NSW (Spatial Services), CC BY 4.0.
+    The ute is made from a model by <a href="https://sketchfab.com/DR1KING100K">DR1KING100K</a> (CC BY 4.0), cut down and re-coloured. Sounds: CC0 and CC BY recordings from Freesound. Songs: “The Late Cake” by willfarrell85 and “Drift Yodel”. Made with raylib.
+    <a href="https://github.com/whoaboygames/bush-drift-play/blob/main/CREDITS.md">Full credits</a>.
+  </footer>
+</div>
+</body>
+</html>
