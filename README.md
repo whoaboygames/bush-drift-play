@@ -1,5 +1,7 @@
 # Bush Drift
 
+![The Cattleman sideways at 82 km/h in the tall bush below the hut](media/hero.png)
+
 A driving game on a real dirt road in the NSW South East Forest: 7.8 km from an old cattlemen's hut down the fire
 trails to a creek bridge, in a single-cab ute, the Cattleman. Gravel, potholes, ruts and whoa-boys, tall wet forest
 either side, real hills, and a pixel-art look.
@@ -9,6 +11,10 @@ score and no clock, the road both ways and the bush either side of it.
 
 By **Whoa-Boy Games**. This is a play test: things change between builds, and your feedback shapes what comes next.
 
+![The Cattleman in a long, fast slide through the bush](media/drift.gif)
+
+More pictures: [the gallery on the play-test page](https://whoaboygames.github.io/bush-drift-play/#pictures).
+
 **Play in the browser:** https://whoaboygames.github.io/bush-drift-play/ (keyboard, or touch on a phone; it fills the
 window, and F or the ⛶ button goes full screen. On an iPhone, Share → Add to Home Screen opens it full screen.)
 
@@ -17,8 +23,6 @@ newer; install steps in the [latest release](https://github.com/whoaboygames/bus
 Install it straight over the last play test. Don't delete the old one: your deer, achievements and records stay.
 
 **Feedback:** the "Tell me how it went" button on the play-test page, or [open an issue](https://github.com/whoaboygames/bush-drift-play/issues/new/choose).
-
-![Sliding through a bend in the bush](https://whoaboygames.github.io/bush-drift-play/drift.png)
 
 ## Controls
 
